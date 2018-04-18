@@ -1,0 +1,26 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "app to meet new friends ",
+  "main": "apiRoutes.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garret1983/friend-finder.git"
+  },
+  "author": "garret",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garret1983/friend-finder/issues"
+  },
+  "homepage": "https://github.com/garret1983/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}
