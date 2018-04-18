@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Friend Finder</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper grey accent-2">
+                <i class="fa fa-address-book-o fa-5x" arie-hidden="true" id=logo-icon></i>
+                <a href="/" class="brand-logo" id="logo">Friend Finder</a>
+                <ul class="right hide-on-med-and-down" id="head-nav-links">
+                    <li>
+                        <a href="/survey">Survey</a>
+                    </li>
+                    <li>
+                        <a href="/api/friends">API Friends List</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/garret1983/friend-finder">GitHub Repo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class+ "continer">
+            <div class="row">
+                <dov class+ "col s12 z-depth-5 mainpanel">
+                    <div id="mainpanel-content">
+                        <h1>Survey Questions</h1>
+                        <div class="divider"></div>
+
+                        <h3>About You</h3>
+
+                        <div class="input-field col s6">
+                            <h5>Name (required)</h5>
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" class="validate" placeholder="photo link here" id="userPhoto">
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 1</h3>
+                            <h5>You enjoy watching sports</h5>
+                            <select id="question1">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 2</h3>
+                            <h5>how much do you enjoy a cold beer</h5>
+                            <select id="question2">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 3</h3>
+                            <h5>Junk food is great!</h5>
+                            <select id="question3">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 4</h3>
+                            <h5>you enjoy helping people</h5>
+                            <select id="question4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 5</h3>
+                            <h5>People usually piss you off.</h5>
+                            <select id="question5">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 6</h3>
+                            <h5>dtae nights are fun</h5>
+                            <select id="question6">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 7</h3>
+                            <h5>youre a cat person</h5>
+                            <select id="question7">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 8</h3>
+                            <h5>youre a dog person</h5>
+                            <select id="question8">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 9</h3>
+                            <h5>you enjoy being outside</h5>
+                            <select id="question9">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <h3>Question 10</h3>
+                            <h5>homework is the must fun thing ever!!!</h5>
+                            <select id="question10">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit" name="action" id="submitButton">Submit Responses
+                                <i class="material-icons right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    //line 205 angrbrd git hub
+
+
+
+</body>
+
+</html>
