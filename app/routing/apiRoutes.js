@@ -3,10 +3,12 @@ var path = require('path');
 var friends = require('../data/friends.js');
 
 module.exports = function (app) {
-
-    app.get("api/friends", function (req, res) {
+    // console.log("working")
+    app.post("/api/friends", function (req, res) {
+        console.log(" stll working")
         var userInput = req.body;
         var userResponses = userInput.scores;
+        console.log(userInput.scores); 
 
         var matchName = "";
         var matchImage = "";
@@ -17,8 +19,8 @@ module.exports = function (app) {
 
 
             var diff = 0;
-            for (var i = 0; i < userResponses.lenght; i++) {
-                diff += math.abd(friends[i].scores[i] - userResponses[i]); {
+            for (var i = 0; i < userResponses.length; i++) {
+                diff += Math.abs(friends[i].scores[i] - userResponses[i]); {
 
                 }
                 if (diff < totalDifference) {
