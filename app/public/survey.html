@@ -14,23 +14,7 @@
 <body>
 
     <header>
-        <nav>
-            <div class="nav-wrapper grey accent-2">
-                <i class="fa fa-address-book-o fa-5x" arie-hidden="true" id=logo-icon></i>
-                <a href="/" class="brand-logo" id="logo">Friend Finder</a>
-                <ul class="right hide-on-med-and-down" id="head-nav-links">
-                    <li>
-                        <a href="/survey">Survey</a>
-                    </li>
-                    <li>
-                        <a href="/api/friends">API Friends List</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/garret1983/friend-finder">GitHub Repo</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    
     </header>
 
     <main>
@@ -45,7 +29,7 @@
 
                         <div class="input-field col s6">
                             <h5>Name (required)</h5>
-                            <i class="material-icons prefix">account_circle</i>
+                          
                             <input type="text" class="validate" placeholder="photo link here" id="userPhoto">
                         </div>
 
@@ -191,10 +175,65 @@
         </div>
     </main>
 
-    //line 205 angrbrd git hub
 
 
+	<!-- Modal Dialog Displaying Closest Friend Match -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+			<h5 id="userMatch"></h5>
+			<img id="userMatchImage" class="materialboxed" width="650" src="">
+		</div>
+		<div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+		</div>
+	</div>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.modal').modal({
+				dismissible: false, 
+				opacity: .5, 
+				inDuration: 300, 
+				outDuration: 200, 
+				startingTop: '4%', 
+				endingTop: '10%' 
+			});
+		});
+		
+		$('#submitButton').on('click', function(event) {
+			event.preventDefault();
+		
+			var userInput = {
+				name: $('#userName').val().trim(),
+				photo: $('#userPhoto').val().trim(),
+				scores:[
+					$('#question1').val().trim(),
+					$('#question2').val().trim(),
+					$('#question3').val().trim(),
+					$('#question4').val().trim(),
+					$('#question5').val().trim(),
+					$('#question6').val().trim(),
+					$('#question7').val().trim(),
+					$('#question8').val().trim(),
+					$('#question9').val().trim(),
+					$('#question10').val().trim()
+				]
+			};
+			console.log('userInput = ' + JSON.stringify(userInput));
+		
+			$.post('/api/friends', userInput)
+      		.done(function(data) {
+      		h
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+		    
+      			$('#modal1').modal('open');
+      		});
+		});
+	</script>
 </body>
-
 </html>
+
